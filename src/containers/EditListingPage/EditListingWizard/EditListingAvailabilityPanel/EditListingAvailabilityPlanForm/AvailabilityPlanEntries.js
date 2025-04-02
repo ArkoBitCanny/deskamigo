@@ -271,7 +271,7 @@ const TimeRangeSelects = props => {
         <div className={css.segment}>
           <FieldSeatsInput
             id={`${name}.seats`}
-            name={`${name}.seats`}
+            name={`${name}.name`}
             inputRootClass={css.seatsInput}
             rootClassName={css.seatsField}
             unitType={unitType}

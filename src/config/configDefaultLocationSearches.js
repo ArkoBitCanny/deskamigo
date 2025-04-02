@@ -13,19 +13,19 @@ const { LatLng, LatLngBounds } = sdkTypes;
 //       2) reduce the cost of using map providers geocoding API
 const defaultLocations = [
   // {
-  //   id: 'default-helsinki',
+  //   id: 'default-lisbon',
   //   predictionPlace: {
-  //     address: 'Helsinki, Finland',
-  //     bounds: new LatLngBounds(new LatLng(60.29783, 25.25448), new LatLng(59.92248, 24.78287)),
+  //     address: 'Lisbon, Portgal',
+  //     bounds: new LatLngBounds(new LatLng(38.736946, 22.38197), new LatLng(-9.142685, 22.06644)),
   //   },
   // },
-  // {
-  //   id: 'default-turku',
-  //   predictionPlace: {
-  //     address: 'Turku, Finland',
-  //     bounds: new LatLngBounds(new LatLng(60.53045, 22.38197), new LatLng(60.33361, 22.06644)),
-  //   },
-  // },
+  {
+    id: 'default-turku',
+    predictionPlace: {
+      address: 'Turku, Finland',
+      bounds: new LatLngBounds(new LatLng(60.53045, 22.38197), new LatLng(60.33361, 22.06644)),
+    },
+  },
   // {
   //   id: 'default-tampere',
   //   predictionPlace: {

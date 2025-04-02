@@ -65,12 +65,14 @@ const OwnMessage = props => {
   });
 
   return (
-    <div className={css.ownMessage}>
-      <div className={css.ownMessageContentWrapper}>
-        <p className={css.ownMessageContent}>{content}</p>
+      <div className={css.ownMessage}>
+        <div className={css.ownMessageContentWrapper}>
+          <p className={css.ownMessageContent}>{content}</p>
+        </div>
+        <p className={css.ownMessageDate}>{formattedDate}</p>
+        {/* I Am Here */}
+        <p className={css.translateLine}>translate</p>
       </div>
-      <p className={css.ownMessageDate}>{formattedDate}</p>
-    </div>
   );
 };
 
@@ -117,8 +119,8 @@ const TransitionMessage = props => {
     transition.by === ownRole
       ? 'you'
       : [TX_TRANSITION_ACTOR_SYSTEM, TX_TRANSITION_ACTOR_OPERATOR].includes(transition.by)
-      ? transition.by
-      : otherUsersName;
+        ? transition.by
+        : otherUsersName;
 
   const reviewLink = showReviewAsFirstLink ? (
     <InlineTextButton onClick={onOpenReviewModal}>
@@ -287,8 +289,8 @@ export const ActivityFeed = props => {
       const reviewEntity = isCustomerReview
         ? reviewByAuthorId(transaction, customer.id)
         : isProviderRieview
-        ? reviewByAuthorId(transaction, provider.id)
-        : null;
+          ? reviewByAuthorId(transaction, provider.id)
+          : null;
 
       const listingTitle = listing.attributes.deleted
         ? intl.formatMessage({ id: 'TransactionPage.ActivityFeed.deletedListing' })

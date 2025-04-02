@@ -21,6 +21,7 @@ const app = express();
 
 // NOTE: CORS is only needed in this dev API server because it's
 // running in a different port than the main app.
+app.use(express.json());
 app.use(
   cors({
     origin: process.env.REACT_APP_MARKETPLACE_ROOT_URL,

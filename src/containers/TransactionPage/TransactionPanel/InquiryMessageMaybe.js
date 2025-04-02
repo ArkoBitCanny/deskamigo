@@ -31,6 +31,8 @@ const InquiryMessageMaybe = props => {
           <FormattedMessage id="TransactionPanel.inquiryMessageHeading" />
         </Heading>
         <p className={inquiryMsgClasses}>{inquiryMessage}</p>
+        <p className={css.translateLine}>translate</p>
+        <p></p>
       </div>
     );
   }

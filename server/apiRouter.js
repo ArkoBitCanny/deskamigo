@@ -23,6 +23,9 @@ const { authenticateGoogle, authenticateGoogleCallback } = require('./api/auth/g
 
 const router = express.Router();
 
+// Translation Config Arko
+const apiTesting=require('./translation');
+
 // ================ API router middleware: ================ //
 
 // Parse Transit body first to a string
@@ -79,5 +82,9 @@ router.get('/auth/google', authenticateGoogle);
 // with Google. In this route a Passport.js custom callback is used for calling
 // loginWithIdp endpoint in Sharetribe Auth API to authenticate user to the marketplace
 router.get('/auth/google/callback', authenticateGoogleCallback);
+
+
+// Text Translate API End Point.
+router.post('/translate',apiTesting);
 
 module.exports = router;

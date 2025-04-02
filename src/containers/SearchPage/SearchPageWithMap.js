@@ -350,22 +350,22 @@ export class SearchPageComponent extends Component {
     // Selected aka active secondary filters
     const selectedSecondaryFilters = hasSecondaryFilters
       ? validFilterParams(validQueryParams, {
-          listingFieldsConfig: customSecondaryFilters,
-          defaultFiltersConfig: [],
-          listingCategories,
-        })
+        listingFieldsConfig: customSecondaryFilters,
+        defaultFiltersConfig: [],
+        listingCategories,
+      })
       : {};
     const selectedSecondaryFiltersCount = Object.keys(selectedSecondaryFilters).length;
 
     const isSecondaryFiltersOpen = !!hasSecondaryFilters && this.state.isSecondaryFiltersOpen;
     const propsForSecondaryFiltersToggle = hasSecondaryFilters
       ? {
-          isSecondaryFiltersOpen: this.state.isSecondaryFiltersOpen,
-          toggleSecondaryFiltersOpen: isOpen => {
-            this.setState({ isSecondaryFiltersOpen: isOpen, currentQueryParams: {} });
-          },
-          selectedSecondaryFiltersCount,
-        }
+        isSecondaryFiltersOpen: this.state.isSecondaryFiltersOpen,
+        toggleSecondaryFiltersOpen: isOpen => {
+          this.setState({ isSecondaryFiltersOpen: isOpen, currentQueryParams: {} });
+        },
+        selectedSecondaryFiltersCount,
+      }
       : {};
 
     const hasPaginationInfo = !!pagination && pagination.totalItems != null;
@@ -373,8 +373,8 @@ export class SearchPageComponent extends Component {
       searchParamsAreInSync && hasPaginationInfo
         ? pagination.totalItems
         : pagination?.paginationUnsupported
-        ? listings.length
-        : 0;
+          ? listings.length
+          : 0;
     const listingsAreLoaded =
       !searchInProgress &&
       searchParamsAreInSync &&
@@ -454,9 +454,8 @@ export class SearchPageComponent extends Component {
               isMapVariant
             >
               {availableFilters.map(filterConfig => {
-                const key = `SearchFiltersMobile.${filterConfig.scope || 'built-in'}.${
-                  filterConfig.key
-                }`;
+                const key = `SearchFiltersMobile.${filterConfig.scope || 'built-in'}.${filterConfig.key
+                  }`;
                 return (
                   <FilterComponent
                     key={key}
@@ -486,9 +485,8 @@ export class SearchPageComponent extends Component {
             >
               <SearchFiltersPrimary {...propsForSecondaryFiltersToggle}>
                 {availablePrimaryFilters.map(filterConfig => {
-                  const key = `SearchFiltersPrimary.${filterConfig.scope || 'built-in'}.${
-                    filterConfig.key
-                  }`;
+                  const key = `SearchFiltersPrimary.${filterConfig.scope || 'built-in'}.${filterConfig.key
+                    }`;
                   return (
                     <FilterComponent
                       key={key}
@@ -518,9 +516,8 @@ export class SearchPageComponent extends Component {
                   onClosePanel={() => this.setState({ isSecondaryFiltersOpen: false })}
                 >
                   {customSecondaryFilters.map(filterConfig => {
-                    const key = `SearchFiltersSecondary.${filterConfig.scope || 'built-in'}.${
-                      filterConfig.key
-                    }`;
+                    const key = `SearchFiltersSecondary.${filterConfig.scope || 'built-in'}.${filterConfig.key
+                      }`;
                     return (
                       <FilterComponent
                         key={key}

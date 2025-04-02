@@ -16,6 +16,7 @@ import css from './OrderBreakdown.module.css';
  */
 const LineItemShippingFeeMaybe = props => {
   const { lineItems, intl } = props;
+  console.log(lineItems);
 
   const shippingFeeLineItem = lineItems.find(
     item => item.code === LINE_ITEM_SHIPPING_FEE && !item.reversal

@@ -161,7 +161,11 @@ export const BookingTimeForm = props => {
                 handleFetchLineItems={onHandleFetchLineItems}
               />
             ) : null}
-            {seatsEnabled ? (
+
+
+            {/* Rearraged by Arko */}
+            
+            {/* {seatsEnabled ? (
               <FieldSelect
                 name="seats"
                 id="seats"
@@ -189,7 +193,8 @@ export const BookingTimeForm = props => {
                   </option>
                 ))}
               </FieldSelect>
-            ) : null}
+            ) : null} */}
+
 
             {showEstimatedBreakdown ? (
               <div className={css.priceBreakdownContainer}>

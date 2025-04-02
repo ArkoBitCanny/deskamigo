@@ -93,6 +93,7 @@ if (cspEnabled) {
 
   // When a CSP directive is violated, the browser posts a JSON body
   // to the defined report URL and we need to parse this body.
+  
   app.use(
     bodyParser.json({
       type: ['json', 'application/csp-report'],

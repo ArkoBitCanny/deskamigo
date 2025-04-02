@@ -41,6 +41,7 @@
   @media (--viewportMedium) {
     margin: 32px 24px 0 24px;
   }
+
   @media (--viewportLarge) {
     margin: 32px 0 0 0;
   }
@@ -52,7 +53,8 @@
   display: none;
   width: 100%;
   position: relative;
-  background-color: var(--colorGrey100); /* Loading BG color */
+  background-color: var(--colorGrey100);
+  /* Loading BG color */
 
   @media (--viewportLarge) {
     display: block;
@@ -87,6 +89,7 @@
     margin-top: -32px;
     padding: 2px 0;
   }
+
   @media (--viewportLarge) {
     margin-left: 48px;
     width: unset;
@@ -97,7 +100,8 @@
 /* Passed-in props for DetailCardImage subcomponent */
 .imageWrapperMobile {
   position: relative;
-  background-color: var(--colorGrey100); /* Loading BG color */
+  background-color: var(--colorGrey100);
+  /* Loading BG color */
 
   @media (--viewportLarge) {
     display: none;
@@ -129,6 +133,7 @@
     margin-top: 120px;
   }
 }
+
 .avatarDesktop {
   @media (--viewportLarge) {
     display: flex;
@@ -213,10 +218,12 @@
     margin-top: 40px;
     padding: 4px 0 4px 0;
   }
+
   @media (--viewportLarge) {
     display: none;
   }
 }
+
 .deliveryInfoSection {
   order: 1;
 }
@@ -238,7 +245,8 @@
 .stickySection {
   @media (--viewportLarge) {
     position: sticky;
-    top: -200px; /* This is a hack to showcase how the component would look when the image isn't sticky */
+    top: -200px;
+    /* This is a hack to showcase how the component would look when the image isn't sticky */
     width: 409px;
     z-index: 1;
   }
@@ -444,6 +452,7 @@
     padding: 7px 0 1px 0;
     margin: 40px 24px 0 24px;
   }
+
   @media (--viewportLarge) {
     margin: 40px 0 0 0;
   }
@@ -458,6 +467,7 @@
     margin: 49px 24px 0 24px;
     border-top: 0;
   }
+
   @media (--viewportLarge) {
     margin: 48px 0 0 0;
   }
@@ -473,6 +483,7 @@
     margin: 49px 24px 0 24px;
     border-top: 0;
   }
+
   @media (--viewportLarge) {
     margin: 47px 0 0 0;
   }
@@ -534,6 +545,7 @@
     margin: 0 0 10px 0;
     padding: 1px 0 7px 0;
   }
+
   @media (--viewportLarge) {
     margin: 0;
   }
@@ -552,9 +564,11 @@
     display: none;
   }
 }
+
 .mobileActionButtonSpacer {
   width: 100%;
   height: 120px;
+
   @media (--viewportLarge) {
     display: none;
   }
@@ -593,8 +607,29 @@
   @media (--viewportMedium) {
     margin: 0;
   }
+
   @media (--viewportLarge) {
     padding: 0px 75px;
     margin-top: 16px;
   }
+}
+
+/* Arko Addition */
+
+.translateLine {
+  color: #413f3f;
+  border-bottom: 0.5px solid darkgray;
+  width: fit-content;
+  background-color: lightgray;
+  padding: 5.4px 16px;
+  line-height: 0;
+  border-radius: 25px;
+  font-weight: 375;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.6s ease-out;
+}
+
+.translateLine:hover {
+  color: rgb(16, 95, 243);
 }

@@ -28,8 +28,11 @@ const getSearchMapVariantHandles = mapProvider => {
     infoCardHandle: searchMapVariant.INFO_CARD_HANDLE,
   };
 };
+
+// Given Bounds to map
 const getFitMapToBounds = mapProvider => {
   const searchMapVariant = getSearchMapVariant(mapProvider);
+  console.log(searchMapVariant.fitMapToBounds);
   return searchMapVariant.fitMapToBounds;
 };
 const getSearchMapVariantComponent = mapProvider => {
@@ -76,7 +79,7 @@ export class SearchMapComponent extends Component {
     this.createURLToListing = this.createURLToListing.bind(this);
     this.onListingInfoCardClicked = this.onListingInfoCardClicked.bind(this);
     this.onListingClicked = this.onListingClicked.bind(this);
-    this.onMapClicked = this.onMapClicked.bind(this);
+    this.onMapClicked=this.onMapClicked.bind(this);
     this.onMapLoadHandler = this.onMapLoadHandler.bind(this);
   }
 
@@ -142,7 +145,7 @@ export class SearchMapComponent extends Component {
       location,
       listings: originalListings,
       onMapMoveEnd,
-      zoom = 11,
+      zoom = 10,
       config,
       activeListingId,
       messages,
@@ -179,7 +182,7 @@ export class SearchMapComponent extends Component {
         <SearchMapVariantComponent
           id={id}
           className={classes}
-          bounds={bounds}
+          bounds={bounds?bounds:{_sdkType: "LatLngBounds",ne: {lat:38.76378423,lng:-9.090602,_sdkType:"LatLng"},sw: {lat:38.72350129,lng:-9.229836,_sdkType:"LatLng"}}}
           center={center}
           location={location}
           infoCardOpen={infoCardOpen}
@@ -196,6 +199,7 @@ export class SearchMapComponent extends Component {
           zoom={zoom}
           config={config}
         />
+        {console.log(listings)}
       </ReusableMapContainer>
     ) : (
       <div className={classNames(classes, reusableContainerClassName || css.defaultMapLayout)} />
